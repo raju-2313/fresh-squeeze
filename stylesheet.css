@@ -1,0 +1,495 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9F0;
+            color: #2D1B13;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth ;
+        }
+
+    
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4ECDC4 0%, #FF6B35 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.212);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 32px;
+            animation: float 3s ease-in-out infinite;
+            color: white;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 100px;
+            font-weight: bolder;
+            color: white;
+            margin-bottom:16px;
+            animation:  fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 22px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+            flex-direction: row;
+            align-items: center;
+            margin-top:80px;
+        }
+
+        .btn {
+            padding: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            display: inline-block;
+            width: 200px;
+
+        }
+
+        .btn-primary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid white;
+            box-shadow: 0 10px 30px -5px rgba(253, 253, 253, 0.075);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.1);
+            background: white;
+            color: #FF6B35;
+            box-shadow: 0 15px 40px -5px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #FF6B35;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px -5px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-about {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-about:hover {
+            background: white;
+            color: #FF6B35;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px -5px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-contact {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-contact:hover {
+            background: white;
+            color: #FF6B35;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px -5px rgba(255, 107, 53, 0.5);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            animation-name: bounce;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .scroll-indicator div {
+            width: 32px;
+            height: 47px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 8px;
+        }
+        .span1 {
+            width: 10px;
+            height: 47px;
+            background: #ffffff;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            transform: rotate(45deg) translateY(7px);
+        
+        }
+        .span2 {
+            width: 10px;
+            height: 47px;
+            background: #ffffff;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            transform: rotate(135deg) translateY(-7px) ;
+            
+            
+            
+
+
+        }
+        
+
+        
+        
+        .menu {
+            padding: 50px 20px 50px 20px;
+            background: #FFF9F0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .section-header h2 {
+            font-size: 50px;
+            font-weight: 800;
+            color: #2D1B13;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #6B5B52;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .juice-grid {
+            display: grid;
+            grid-template-columns: repeat(5,350px ); 
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .juice-card1, .juice-card2, .juice-card3, .juice-card4, .juice-card5 {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px -2px rgba(45, 27, 19, 0.1);
+            transition: all 0.5s ease;
+            animation: fadeInUp 0.8s ease-out;
+            border: 0.5px solid #e0e0e0;
+        }
+
+
+        .juice-card1:hover, .juice-card2:hover, .juice-card3:hover, .juice-card4:hover, .juice-card5:hover {
+            transform: translateY(-20px);
+            box-shadow: 5px -2px 3px 0px rgba(45, 27, 19, 0.1);
+        }
+
+        .juice-image {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .juice-image img {
+            width: 100%;
+            object-fit: fill;
+            transition: transform 0.5s ease;
+        }
+
+        .juice-card:hover .juice-image img {
+            transform: scale(1.2);
+        }
+
+      
+
+        .juice-info {
+            padding: 20px;
+        }
+
+        .juice-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2D1B13;
+            margin-bottom: 0.5rem;
+        }
+
+        .juice-info p {
+            color: #6B5B52;
+            margin-bottom: 1rem;
+        }
+
+        .juice-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF6B35;
+        }
+
+        .btn-order {
+            padding: 0.6rem 1.5rem;
+            background: #FF6B35;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-order:hover {
+            background: #E55A2B;
+            transform: scale(1.05);
+        }
+
+        
+        .about {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #4ECDC4 0%, #FF6B35 100%);
+        }
+
+        .about .section-header h2,
+        .about .section-header p {
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px -2px rgba(45, 27, 19, 0.1);
+            transition: all 0.5s ease;
+            animation: scaleIn 0.4s ease-out;
+        }
+
+
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px -5px rgba(255, 107, 53, 0.3);
+        }
+
+        .feature-icon1, .feature-icon2, .feature-icon3 {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #ffffff;
+            margin: auto;
+            font-size: 32px;
+
+        }
+
+
+
+        .feature-card h3 {
+            font-size: 25px;
+            font-weight: 700;
+            color: #2D1B13;
+        }
+
+        .feature-card p {
+            color: #6B5B52;
+        }
+
+        .contact {
+            padding: 6rem 2rem;
+            background: #FFF9F0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+
+        .contact-card {
+            background: #F5EEE6;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        
+
+        .contact-card:hover {
+            box-shadow: 0 4px 20px -2px rgba(45, 27, 19, 0.1);
+        }
+
+        .contact-icon1 , .contact-icon2, .contact-icon3 {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            padding: 12px 12px 12px 12px;
+            margin: auto;
+            font-size: 32px;
+            background-color: #c2acac7e;
+        }
+
+
+        .contact-card h3 {
+            font-size: 25px;
+            font-weight: 700;
+            color: #2D1B13;
+        }
+
+        .contact-card p {
+            color: #6B5B52;
+        }
+        
+        
+        .end {
+            background: #2D1B13;
+            color: #FFF9F0;
+            padding: 15px ;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: -2px 1px 7px 4px #5b5a5a;
+              
+        }
+
+        .end h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .end p {
+            color: rgba(255, 249, 240, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+         .copyright {
+            font-size: 19px;
+            color: rgba(255, 249, 240, 0.6);
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(10px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+
+
+    
+        }
+
+      

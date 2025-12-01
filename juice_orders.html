@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Popup Animation</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(images/fruit-frame-wooden-background.jpg) ;
+            background-size: cover;
+            background-position: center;
+            
+            
+            
+            
+        }
+
+    .orderselect {
+        width: 300px;
+        height: 280px;
+        background: rgba(0,0,0,0.3);
+        color: white;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.3) ;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        
+    }
+
+    .orderselect select {
+            width: 90%;
+            padding: 12px;
+            font-size: 15px;
+            border: 2px solid #292929;
+            border-radius: 10px;
+            background-color: white;
+            cursor: pointer;
+            margin-bottom: 20px;
+    
+    
+    }
+
+   
+    #popup-toggle {
+        display: none;
+        }
+
+    .orderselect input[type="number"] {
+            width: 80%;
+            padding: 12px;
+            font-size: 15px;
+            border: 2px solid #222121;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+
+        .popup-btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            border: 1px solid #292929;
+            border-radius: 25px;
+            cursor: pointer;
+            transform: scale(1);
+            
+            
+        
+        }
+
+        .popup-btn:hover {
+           
+            transition: linear 0.25s ;
+            transform: scale(1.01);
+            font-size: 18px;
+            padding: 15px 30px;
+        }
+
+    
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-top-right-radius: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transform: translateX(400px) translateY(50px);
+            opacity: 0;
+            transition: all 0.4s;
+        }
+
+    
+        #popup-toggle:checked ~ .popup {
+            transform: translateX(0) translateY(0);
+            opacity: 1;
+            animation: hidepopup 0.4s 2s forwards;
+        }
+
+        @keyframes hidePopup {
+            to {
+                transform: translateX(400px) translateY(50px);
+                opacity: 0;
+            }
+        }
+
+    
+        .popup h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .popup p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .grid {
+            width: 800px;
+            margin-left: 50%;
+            margin-right: 50%;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="grid" style="place-items: center; display: grid;">
+            <div class="orderselect">
+                
+                <h2 style="text-decoration: underline;font-weight: bolder;">Select Your Juice</h2>
+                
+                
+                <label for="juice" >Choose a juice:</label>
+                    <select id="juice" name="juice">
+                        <option value="orange" class="juice">Orange Juice - ₹50</option>
+                        <option value="strawberry"class="juice">Strawberry Juice - ₹70</option>
+                        <option value="apple"class="juice">Apple Juice - ₹60</option>
+                        <option value="mango"class="juice">Mango Juice - ₹60</option>
+                        <option value="pineapple"class="juice">Pineapple Juice - ₹60</option>
+                    </select>
+                    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+                    
+
+                    <input type="checkbox" id="popup-toggle">
+                    <label for="popup-toggle" class="popup-btn"> Place Order </label>
+                    
+                    <div class="popup" >
+                        <br><br><br>
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;font-weight: bolder;font-size: 30px;">✅ Success!</h2>
+                        <br><br><br>
+                        <p>Your order has been succesefully placed !! </p>
+                        <br>
+                        <p> Explore more flavours by visiting to our website</p>
+                        <br><br>
+                        <a href="Home_page.html" style="text-decoration: none; color: blue; font-weight: bold;"> Visit Us </a>
+                    </div>
+            </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
