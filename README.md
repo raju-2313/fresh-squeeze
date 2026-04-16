@@ -2,6 +2,8 @@
 
 A fresh juice ordering website for a local juice shop — built to give customers a clean, modern way to browse the menu and place orders online.
 
+
+Live demo : fresh-squeeze-inky.vercel.app
 ---
 
 ## What It Does
