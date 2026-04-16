@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh Squeeze — naturally cold-pressed fruit juices, made to order in Sangli. No preservatives. No compromise.">
+  <meta name="theme-color" content="#B94A28">
+  <title>Fresh Squeeze — Natural Fruit Juices</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+  <!-- Hidden checkbox — CSS-only toggle for hamburger / mobile drawer -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle__input" aria-hidden="true">
+
+  <!-- ══════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="main-nav" aria-label="Primary navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Fresh Squeeze — home">Fresh Squeeze</a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">Why Us</a></li>
+        <li><a href="#contact">Find Us</a></li>
+      </ul>
+
+      <a href="juice_orders.html" class="nav__cta" id="nav-order-btn">Order Now</a>
+
+      <!-- Hamburger / close — label controls the checkbox, no JS needed -->
+      <label
+        for="nav-toggle"
+        class="nav__hamburger"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Mobile nav drawer — shown/hidden via #nav-toggle:checked in CSS -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav__links" role="list">
+      <!-- Each link is also a label so tapping it dismisses the drawer -->
+      <li>
+        <label for="nav-toggle"><a href="#menu" class="mobile-nav__link">Menu</a></label>
+      </li>
+      <li>
+        <label for="nav-toggle"><a href="#about" class="mobile-nav__link">Why Us</a></label>
+      </li>
+      <li>
+        <label for="nav-toggle"><a href="#contact" class="mobile-nav__link">Find Us</a></label>
+      </li>
+    </ul>
+    <a href="juice_orders.html" class="mobile-nav__cta" id="mobile-order-btn">Order Now →</a>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO — asymmetric split
+       Left: editorial type on dark earth
+       Right: full-bleed image panel
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Homepage hero">
+
+    <div class="hero__left">
+      <div class="hero__left-texture" aria-hidden="true"></div>
+
+      <p class="hero__eyebrow">
+        <span class="hero__eyebrow-line" aria-hidden="true"></span>
+        Made fresh to order · Sangli
+      </p>
+
+      <h1 class="hero__title">
+        Pure fruit.<br>
+        <em>Nothing</em><br>
+        else.
+      </h1>
+
+      <p class="hero__desc">
+        Cold-pressed, organic, zero preservatives. Every glass is squeezed the moment you order — and you can taste the difference.
+      </p>
+
+      <div class="hero__actions">
+        <a href="juice_orders.html" class="btn-solid" id="hero-order-btn">
+          Order Now
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a href="#menu" class="btn-ghost" id="hero-menu-btn">See the menu</a>
+      </div>
+    </div>
+
+    <div class="hero__right" aria-hidden="true">
+      <img src="images/orange-juice.jpg" alt="">
+
+      <div class="hero__float-badge">
+        <div class="hero__float-badge-label">Our bestseller</div>
+        <div class="hero__float-badge-value">Fresh Orange — ₹50</div>
+      </div>
+
+      <span class="hero__right-tag">Freshly Squeezed</span>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       MARQUEE — personality ticker
+  ══════════════════════════════════════════════════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Fresh Orange<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Strawberry Bliss<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Crisp Apple<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Tropical Mango<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Golden Pineapple<span class="marquee__dot"></span></span>
+      <span class="marquee__item">100% Organic<span class="marquee__dot"></span></span>
+      <span class="marquee__item">No Preservatives<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Made to Order<span class="marquee__dot"></span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee__item">Fresh Orange<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Strawberry Bliss<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Crisp Apple<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Tropical Mango<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Golden Pineapple<span class="marquee__dot"></span></span>
+      <span class="marquee__item">100% Organic<span class="marquee__dot"></span></span>
+      <span class="marquee__item">No Preservatives<span class="marquee__dot"></span></span>
+      <span class="marquee__item">Made to Order<span class="marquee__dot"></span></span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       MENU — sequential wave (pure CSS)
+  ══════════════════════════════════════════════════════════ -->
+
+  <section id="menu" class="menu menu--dark" aria-labelledby="menu-heading">
+
+    <div class="menu__header">
+      <div class="menu__header-left u-reveal">
+        <span class="kicker">Our Menu</span>
+        <h2 class="menu__title menu__title--light" id="menu-heading">Every glass,<br>crafted fresh.</h2>
+      </div>
+      <div class="menu__header-right u-reveal u-delay-2">
+        <p class="menu__subtitle menu__subtitle--light">Made to order with 100% natural, locally sourced ingredients. No additions. No shortcuts.</p>
+        <a href="juice_orders.html" class="btn-solid" id="menu-order-btn">
+          Order Now
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- ── Wave track ──────────────────────────────────────── -->
+    <div class="wave-outer" aria-label="Juice menu">
+      <div class="wave-track">
+
+        <!-- Card 0 — Fresh Orange -->
+        <div class="wcard-lift" style="--i:0">
+          <article class="wcard" aria-label="Fresh Orange — ₹50">
+            <div class="wcard__media">
+              <img src="images/orange-juice.jpg" alt="Fresh orange juice" loading="lazy">
+              <span class="wcard__badge">Best Seller</span>
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Fresh Orange</h3>
+              <p class="wcard__desc">Sun-ripened Nagpur oranges cold-pressed for max vitamin C.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">₹50</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-orange">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 1 — Strawberry Bliss -->
+        <div class="wcard-lift" style="--i:1">
+          <article class="wcard" aria-label="Strawberry Bliss — ₹70">
+            <div class="wcard__media">
+              <img src="images/strawberry-juice.jpeg" alt="Fresh strawberry juice" loading="lazy">
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Strawberry Bliss</h3>
+              <p class="wcard__desc">Hand-picked strawberries, silky and antioxidant-rich.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">₹70</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-strawberry">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2 — Crisp Apple -->
+        <div class="wcard-lift" style="--i:2">
+          <article class="wcard" aria-label="Crisp Apple — ₹60">
+            <div class="wcard__media">
+              <img src="images/apple-juice.jpeg" alt="Fresh apple juice" loading="lazy">
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Crisp Apple</h3>
+              <p class="wcard__desc">Fuji apples pressed clean — naturally sweet, great for detox.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">₹60</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-apple">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3 — Tropical Mango -->
+        <div class="wcard-lift" style="--i:3">
+          <article class="wcard" aria-label="Tropical Mango — ₹60">
+            <div class="wcard__media">
+              <img src="images/mango-juice.jpeg" alt="Fresh mango juice" loading="lazy">
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Tropical Mango</h3>
+              <p class="wcard__desc">Alphonso at peak ripeness — thick, golden, sunshine-sweet.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">₹60</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-mango">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4 — Golden Pineapple -->
+        <div class="wcard-lift" style="--i:4">
+          <article class="wcard" aria-label="Golden Pineapple — ₹60">
+            <div class="wcard__media">
+              <img src="images/pineapple-juice.jpeg" alt="Fresh pineapple juice" loading="lazy">
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Golden Pineapple</h3>
+              <p class="wcard__desc">Tangy-sweet tropical burst, rich in bromelain and enzymes.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">₹60</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-pineapple">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 5 — Mix it Up -->
+        <div class="wcard-lift wcard-lift--mix" style="--i:5">
+          <article class="wcard wcard--mix" aria-label="Mix it Up — custom blend">
+            <div class="wcard__media wcard__media--mix">
+              <span class="wcard__mix-glyph" aria-hidden="true">✦</span>
+            </div>
+            <div class="wcard__body">
+              <h3 class="wcard__name">Mix it Up</h3>
+              <p class="wcard__desc">Can't decide? Any combination, pressed fresh in order.</p>
+              <div class="wcard__footer">
+                <span class="wcard__price">Custom</span>
+                <a href="juice_orders.html" class="wcard__btn" id="order-wcard-mix">Order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div><!-- /wave-track -->
+    </div><!-- /wave-outer -->
+
+  </section>
+
+
+
+
+
+  </section>
+
+
+
+  <!-- ══════════════════════════════════════════════════════
+       MANIFESTO — typographic pull-quote
+       Cream→Parchment→Earth transition buffer
+  ══════════════════════════════════════════════════════════ -->
+  <div class="manifesto" aria-label="Our philosophy">
+    <span class="kicker u-reveal">Our philosophy</span>
+    <blockquote class="manifesto__quote u-reveal u-delay-1">
+      We don't add<br>
+      anything. <em>We just<br>
+      press and pour.</em>
+    </blockquote>
+    <p class="manifesto__sig u-reveal u-delay-2">— Fresh Squeeze, Sangli, since 2024</p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       ABOUT / WHY US — numbered, dark section
+  ══════════════════════════════════════════════════════════ -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="about__inner">
+
+      <div class="about__heading-block u-reveal">
+        <span class="kicker">Why choose us</span>
+        <h2 class="about__title" id="about-heading">The honest<br>difference <em>you<br>can taste.</em></h2>
+      </div>
+
+      <div class="reasons">
+
+        <div class="reason u-reveal">
+          <span class="reason__num" aria-hidden="true">01</span>
+          <p class="reason__index">01</p>
+          <h3 class="reason__name">100% Organic</h3>
+          <p class="reason__body">Every fruit comes from certified organic farms. No pesticides, no chemicals — just soil and sunlight.</p>
+        </div>
+
+        <div class="reason u-reveal u-delay-1">
+          <span class="reason__num" aria-hidden="true">02</span>
+          <p class="reason__index">02</p>
+          <h3 class="reason__name">Made with Love</h3>
+          <p class="reason__body">Each glass is pressed by hand with genuine care. We taste every batch before it reaches you.</p>
+        </div>
+
+        <div class="reason u-reveal u-delay-2">
+          <span class="reason__num" aria-hidden="true">03</span>
+          <p class="reason__index">03</p>
+          <h3 class="reason__name">Natural Energy</h3>
+          <p class="reason__body">Zero sugar added. Zero preservatives. Just the raw nutrients your body instantly recognises and uses.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       CONTACT — two-panel split
+       Left: dark, large typographic address
+       Right: parchment, practical info rows
+  ══════════════════════════════════════════════════════════ -->
+  <section id="contact" class="contact" aria-labelledby="contact-heading">
+
+    <div class="contact__left">
+      <span class="kicker u-reveal">Find Us</span>
+
+      <h2 class="contact__big-text u-reveal u-delay-1" id="contact-heading">
+        Come in.<br>
+        Taste for<br>
+        yourself.
+      </h2>
+
+      <address class="contact__address u-reveal u-delay-2">
+        <strong>Fresh Squeeze</strong>
+        Vijay Nagar Chowk<br>
+        Sangli, Maharashtra<br>
+        416-414
+      </address>
+    </div>
+
+    <div class="contact__right">
+
+      <div class="contact__info-item u-reveal">
+        <div class="contact__info-label">Phone</div>
+        <div class="contact__info-value"><a href="tel:8600953802">8600953802</a></div>
+        <div class="contact__info-sub">Call anytime during hours</div>
+      </div>
+
+      <div class="contact__info-item u-reveal u-delay-1">
+        <div class="contact__info-label">Hours</div>
+        <div class="contact__info-value">Mon – Sat: 8AM – 8PM</div>
+        <div class="contact__info-sub">Sunday: 9AM – 6PM</div>
+      </div>
+
+      <div class="contact__info-item u-reveal u-delay-2">
+        <div class="contact__info-label">Order</div>
+        <div class="contact__info-value">Online or walk in</div>
+        <div class="contact__info-sub">Ready in minutes</div>
+      </div>
+
+      <div class="contact__order-cta u-reveal u-delay-3">
+        <a href="juice_orders.html" class="btn-solid" id="contact-order-btn">
+          Place an Order
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER — ultra-minimal bar
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <span class="footer__brand">Fresh Squeeze</span>
+
+    <ul class="footer__links" role="list">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">Why Us</a></li>
+      <li><a href="#contact">Find Us</a></li>
+      <li><a href="juice_orders.html">Order</a></li>
+    </ul>
+
+    <p class="footer__copy">&copy; 2024 Fresh Squeeze, Sangli.</p>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════
+  <!-- No scripts needed — wave animation is pure CSS -->
+
+
+</body>
+</html>
+
